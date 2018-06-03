@@ -3,9 +3,9 @@
     "port": 3000,
     "sql": {
         "dialect": "mysql",
-        "database": "ecblog",
-        "username": "root",
-        "password": "eastcity7",
+        "database": "",
+        "username": "",
+        "password": "",
         "host": "localhost",
         "port": 3306
     }

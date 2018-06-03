@@ -50,7 +50,6 @@ const fn_getBlogAndTag = async(ctx) => {
 }
 
 const fn_getTag = async(ctx) => {
-    console.log("fff")
     const tags = await Tag.findAll()
 	logger.debug('已获取tags全部数据')
     ctx.body = {
@@ -139,11 +138,11 @@ const fn_signOut = async(ctx) => {
 
 const fn_getToken = async(ctx, next) => {
     /* 获取七牛云Token*/
-    const accessKey = 'nHKahXXvFXX6J1jSDXuEI-jaYU36DAd-g1A7bORB'
-    const secretKey = 'Rhv5WER-3TafJVtu2_gSOyBZw-9Iqv35JWvAE9cg'
+    const accessKey = '' //你的公钥
+    const secretKey = '' //你的密钥
     const mac = new qiniu.auth.digest.Mac(accessKey, secretKey)
     const putPolicy = new qiniu.rs.PutPolicy({
-        scope: 'crawler'
+        scope: '' //你的对象存储空间名
     })
     const uploadToken = putPolicy.uploadToken(mac)
     /* 根据blogid返回blog信息*/
