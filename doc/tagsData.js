@@ -1,0 +1,20 @@
+export default [
+    { id: 1, value: "jQuery", count: 25 }, 
+    { id: 2, value: "MongoDB", count: 18 },
+    { id: 3, value: "JavaScript", count: 38 }, 
+    { id: 4, value: "React", count: 30 },
+    { id: 5, value: "Nodejs", count: 100 }, 
+    { id: 6, value: "Express.js", count: 25 },
+    { id: 7, value: "HTML5", count: 33 }, 
+    { id: 8, value: "CSS3", count: 20 },
+    { id: 9, value: "Webpack", count: 22 }, 
+    { id: 10, value: "Babel.js", count: 7 },
+    { id: 11, value: "ECMAScript", count: 25 }, 
+    { id: 12, value: "Jest", count: 15 },
+    { id: 13, value: "Mocha", count: 17 }, 
+    { id: 14, value: "React Native", count: 27 },
+    { id: 15, value: "Angular.js", count: 30 }, 
+    { id: 16, value: "TypeScript", count: 15 },
+    { id: 17, value: "Flow", count: 30 }, 
+    { id: 18, value: "NPM", count: 11 }
+]

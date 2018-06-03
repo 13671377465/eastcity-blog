@@ -1,0 +1,36 @@
+@import '../../public/stylesheet/base';
+
+.login-page{
+    height: 100vh;
+    background: #f0f2f5;
+
+    .login-header{
+        text-align: center;
+        background: #f0f2f5;
+
+        h2{
+            font-size: 16px;
+            color: rgba(0,0,0,.45);
+        }
+    }
+    .login-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .login-form{
+            max-width: 300px;
+            flex: 1 1 auto;
+    
+            .errorAlert{
+                margin-bottom: 24px;
+            }
+            .login-form-button{
+                width: 100%;
+            }
+        }
+    }
+    .login-footer{
+        text-align: center;
+    }
+}

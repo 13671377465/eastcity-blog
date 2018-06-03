@@ -1,0 +1,119 @@
+@import './base';
+
+body, div, dl, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, legend,
+button, form, fieldset, textarea, p, blockquote, th, td {
+	margin: 0;
+}
+ul {
+	list-style: none;
+}
+ol, ul, input {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;
+
+	&:link{
+		color: white;
+	}
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+div,header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    &:before{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    &:after{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+}
+html {
+	height: 100%;
+	font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+	background-color: #F9FAFD; 
+	-webkit-text-size-adjust: none;
+	color: #333;
+}
+body{
+    height: 100%;
+}
+
+.web-blog{
+
+    .simple-tagcloud{
+        max-width: 900px;
+        min-height: 500px;
+        margin: 0 auto;
+
+        a{
+            margin: 5px;
+            padding: 3px;
+            display: inline-block;
+            color: #333;
+            cursor: pointer;
+            border-style: solid;
+            border-width: pxrem(2px);
+        }
+    }
+    .simple-about{
+        max-width: 900px;
+        min-height: 500px;
+        margin: 0 auto;
+        @include font-dpr(18px);
+    }
+}
+
+.h5-blog{
+
+    .simple-cloud{
+        max-width: pxrem(900px);
+		margin: 0 auto;
+		@include font-dpr(16px);
+    }
+    .simple-about{
+        max-width: pxrem(900px);
+        min-height: pxrem(500px);
+        padding: 0 pxrem(20px);
+        margin: 0 auto;
+        @include font-dpr(18px);
+    }
+    .simple-tagcloud{
+        max-width: pxrem(900px);
+        min-height: pxrem(500px);
+        padding: 0 pxrem(10px);
+        margin: 0 auto;
+
+        a{
+            margin: pxrem(6px);
+            padding: pxrem(3px);
+            display: inline-block;
+            color: #333;
+            cursor: pointer;
+            border-style: solid;
+            border-width: pxrem(2px);
+        }
+    }
+}

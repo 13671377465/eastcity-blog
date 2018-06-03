@@ -1,0 +1,58 @@
+@import '../../public/stylesheet/base';
+
+.h5-blog{
+
+    .blog-article{
+        @include font-dpr(16px);
+        max-width: pxrem(900px);
+        min-height: pxrem(500px);
+        padding: 0 pxrem(16px); 
+        margin: 0 auto;
+        line-height: 1.6;
+        color: rgba(0,0,0,.7);
+
+        .article-header{
+            margin-bottom: pxrem(32px);
+
+            .author-avatar img {
+                width: pxrem(30px);
+                margin: 0 pxrem(8px);
+                border-radius: pxrem(15px);
+                position: relative;
+                top: pxrem(8px);
+            }
+            .meta .author, .meta .pub-date { 
+                @include font-dpr(16px);
+                font-weight: 900;
+                text-transform: uppercase;
+                color: rgba(0,0,0,.35);
+            }
+            .meta-border {
+                margin: pxrem(28px) 0;
+                width: pxrem(120px);
+                height: pxrem(8px);
+                background: rgba(0,0,0,.7);
+                display: block;
+            }
+        }
+
+        h1{
+            @include font-dpr(32px);
+            font-weight: 900; 
+            margin: pxrem(16px) 0; 
+            line-height: 1.1;  
+        }
+        h2{ 
+            @include font-dpr(24px);
+        }
+        h3{ 
+            @include font-dpr(20px);
+        }
+        p{ 
+            @include font-dpr(16px);
+        }
+        img{ 
+            max-width: 100%; 
+        }
+    }    
+}

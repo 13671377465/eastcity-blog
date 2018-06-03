@@ -1,0 +1,134 @@
+@import '../../public/stylesheet/base';
+
+.h5-blog{
+	.blog-card{
+        @include font-dpr(14px);
+		@include transition(0.3s, height);
+		background: #fff;
+		border-radius: pxrem(3px);
+		box-shadow: 0 pxrem(3px) pxrem(7px) pxrem(-3px) rgba(0, 0, 0, 0.2);
+		margin: 0 auto 1.6%;
+		overflow: hidden;
+		position: relative;
+		line-height: 1.45em;
+		z-index: 100;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	
+		&:hover{
+			.details{
+				left: 0;
+			}
+	
+			&.alt{
+				.details {
+					right: 0;
+				}
+			}
+		}
+	
+		&.alt{
+			.details{
+				right: -100%;
+				left: inherit;
+			}
+		}
+	
+		.photo{
+			height: pxrem(200px);
+			position: relative;
+			background-size: cover;
+		}
+	
+		.details{
+			@include transition(0.3s);
+	
+			background: rgba(0, 0, 0, 0.6);
+			box-sizing: border-box;
+			color: #fff;
+			font-family: "Open Sans";
+			list-style: none;
+			margin: 0;
+			padding: pxrem(10px 15px);
+			height: pxrem(200px);
+			position: absolute;
+			top: 0;
+			left: -100%;
+	
+			> li{
+				padding: pxrem(3px) 0;
+			}
+	
+	
+			.tags{
+				ul{
+					display: flex;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+	
+				li{
+					display: inline-block;
+					margin-right: pxrem(3px);
+				}
+			}
+	
+			a{
+				color: inherit;
+				border-bottom: pxrem(1px) dotted;
+	
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	
+		.description{
+			padding: pxrem(20px);
+			box-sizing: border-box;
+			position: relative;
+	
+			h1{
+				font-family: "Roboto";
+				line-height: 1em;
+				margin: 0 0 pxrem(10px) 0;
+			}
+	
+			h2{
+				color: $grey / 1.5;
+				font-family: "Open Sans";
+				line-height: 1.2em;
+				font-size: 1em;
+				font-weight: 400;
+				margin: 1.2% 0;
+			}
+	
+			p{
+				position: relative;
+				margin: 0;
+				padding-top: pxrem(20px);
+				min-height: pxrem(70px);
+				text-overflow: ellipsis;
+				overflow: hidden;
+				word-break:break-all
+	
+				&::before {
+					content: "";
+					background: $green;
+					height: pxrem(6px);
+					width: pxrem(40px);
+					position: absolute;
+					top: pxrem(6px);
+					left: 0;
+				}
+			}
+	
+			a{
+				color: $green;
+				margin-bottom: pxrem(10px);
+				float: right;
+			}
+		}
+	}
+}

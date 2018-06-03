@@ -1,0 +1,33 @@
+@import '../../public/stylesheet/base';
+
+.h5-blog{
+    .header{
+        width: 100%;
+        height: pxrem(250px);
+        margin-bottom: pxrem(30px);
+        transition: 0.5s ease all;
+        position: relative;
+        background: url(http://p3d0pinbj.bkt.clouddn.com/Panorama_puy_de_dome_sud.jpg) no-repeat center 80%;
+        background-size: cover;
+        z-index: 200;
+
+        &.blurred{
+          filter: blur(pxrem(2px));
+        }
+    
+        .header-title{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            z-index: 900;
+    
+            h1 {
+                @include font-dpr(30px);
+                letter-spacing: 0.3em;
+                color: white;
+                text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

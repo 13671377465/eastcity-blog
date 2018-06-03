@@ -1,0 +1,58 @@
+@import '../../public/stylesheet/base';
+
+.web-blog{
+
+    .blog-article{
+        max-width: 900px;
+        min-height: 500px;
+        padding: 0 16px; 
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(0,0,0,.7);
+
+        .article-header{
+            margin-bottom: 32px;
+
+            .author-avatar img {
+            width: 30px;
+            margin: 0 8px;
+            border-radius: 15px;
+            position: relative;
+            top: 8px;
+            }
+            .meta .author, .meta .pub-date { 
+            font-weight: 900;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: rgba(0,0,0,.35);
+            }
+            .meta-border {
+            margin: 32px 0;
+            width: 160px;
+            height: 8px;
+            background: rgba(0,0,0,.7);
+            display: block;
+            }
+        }
+
+        h1{
+            font-size: 32px;
+            font-weight: 900;
+            margin: 16px 0;
+            line-height: 1.1;
+        }
+        h2{ 
+            font-size: 24px;
+        }
+        h3{ 
+            font-size: 20px;
+        }
+        p{ 
+            font-size: 16px;
+        }
+        img{ 
+            max-width: 100%;
+        }
+    }    
+}

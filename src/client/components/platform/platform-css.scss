@@ -1,0 +1,130 @@
+@import '../../public/stylesheet/base';
+
+.platform{
+
+    .sider{
+        overflow: auto;
+        height: 100vh;
+        position: fixed;
+        left: 0 ;
+        z-index: 5000;
+
+        .platform-logo {
+            width: 50px;
+            display: block;
+            margin: 20px auto;
+            -webkit-transition:all 1s;
+            -moz-transition:all 1s;
+            -o-transition:all 1s;
+            -ms-transition:all 1s;
+            transition:all 1s;
+            z-index: 900;
+        }
+        .platform-logo:hover {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+        .sider-zindex{
+
+            li{
+                z-index: 800;
+            }
+        }
+    }
+    .context{
+        transition: all 0.2s;
+
+        .header{
+            background: #fff;
+            padding: 0;
+            height: auto; 
+            border-bottom: 1px solid #ddd;
+
+            .menu{
+                float: right;
+            }
+        }
+        .content{
+            margin: 0 16px;
+
+            .content-body{
+                background: #fff;
+                min-height: 360px;
+
+                .body-index{
+                    font-size: 24px;
+                    color: gray;
+                    text-align: center;
+                    min-height: 500px;
+                    background: #f0f2f5;
+                    padding-top: 150px;
+                }
+                .body-tag{
+                    background: #f2f5f0;
+
+                    .tagButton{
+                        border-radius: 2px;
+                        width: 100%;
+                        height: 142px;
+                    }
+                    .tagForm{
+                        height: 142px;
+                        background: #fff;
+                        padding: 30px 5px;
+                        border-radius: 2px;
+                        border: 1px #ccc dashed;
+
+                        button{
+                            width: 100%;
+                        }
+                        .tagClose{
+                            font-size: 16px;
+                            margin-top: -20px;
+                            float: right;
+                        }
+                    }
+                }
+                .button-group{
+                    margin-bottom: 16px;
+
+                    button{
+                        margin-right: 8px;
+                    }
+                }
+                .form-button-group{
+                    width: 100%;
+                    text-align: center;
+
+                    button{
+                        margin-right: 8px;
+                    }
+                }
+
+                .blogtable-zindex{
+
+                    input[type="checkbox"]{
+                        z-index: 800;
+                    }
+                }
+            }
+            .content-padding{
+                padding: 24px;
+            }
+        }
+        .footer{
+            text-align: center;
+        }
+    }
+    .context-less{
+        margin-left: 80px;
+    }
+    .context-more{
+        margin-left: 200px;
+    }
+}
+.icon-middle{
+    font-size: 16px;
+}

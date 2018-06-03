@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" data-media="<%= media %>">
+<head>
+    <meta charset="utf-8">
+    <title>EC Blog</title>
+    <% if( media === 'h5-blog' ) { %>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection"> 
+        <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <% } %>
+</head>
+<body> 
+<div class="<%= media %>"></div>
+</body>
+</html>

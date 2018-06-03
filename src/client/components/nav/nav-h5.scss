@@ -1,0 +1,58 @@
+@import '../../public/stylesheet/base';
+
+.h5-blog{
+    .header-nav{
+        width: 100%;
+        height: pxrem(50px);
+        background: none;
+        color: white;
+        border-bottom: pxrem(2px) solid rgba(255, 255, 255, 0.1);
+        z-index: 2000;
+    
+        .nav-menu{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+    
+            li{
+                @include font-dpr(14px);
+                height: 100%;
+                line-height: pxrem(50px);
+                position: relative;
+                flex: 1 1 auto;
+                text-align: center;
+
+                &:last-child{
+                    margin-right: pxrem(150px);
+                }
+            }
+    
+            .menu-item{
+                webkit-transition: all .35s ease-in-out;
+                transition: all .35s ease-in-out;
+                z-index: 1100;
+
+                a{
+                    padding: pxrem(10px);
+                }
+            }
+            .menu-title{
+                font-weight: bold;
+                pointer-events: none;
+                padding: 0 pxrem(10px);
+            }
+        }
+        .nav-target{
+          position: absolute;
+          border-bottom: pxrem(2px) solid white;
+          -webkit-transform: translateX(pxrem(-60px));
+          transform: translateX(pxrem(-60px));
+          webkit-transition: all .35s ease-in-out;
+          transition: all .35s ease-in-out;
+          pointer-events: none;
+          z-index: 1500;
+        }
+    }
+}
