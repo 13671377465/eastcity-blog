@@ -3,11 +3,18 @@ const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
+const displaycss = new ExtractTextWebpackPlugin('[name]-style.css')
+const platformcss = new ExtractTextWebpackPlugin('[name]-style.css')
+
 module.exports = {
-    entry: './src/client/pageindex.js',
+    entry: {
+        display: './src/client/pageindex.js',
+        platform: './src/client/platformindex.js'
+    },
     plugins: [
         new CleanWebpackPlugin('dist'),
-        new ExtractTextWebpackPlugin('style.css'),
+        displaycss,
+        platformcss
     ],
     module: {
         rules: [

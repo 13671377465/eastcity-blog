@@ -3,7 +3,7 @@ const logger = require('../../../config/logConfig')
 const qiniu = require('qiniu')
 const bcrypt = require("bcrypt")
 const UA = require('ua-device')
-const Cookies = require('cookies') 
+const Cookies = require('cookies')
 
 let 
 	User = model.User,
@@ -28,6 +28,10 @@ const fn_render = async(ctx) => {
 	await ctx.render('page', {
 		media: mediaClass
 	})
+}
+
+const fn_renderPlatform = async(ctx) => {
+	await ctx.render('platformpage')
 }
 
 const fn_getBlogAndTag = async(ctx) => {
@@ -138,8 +142,8 @@ const fn_signOut = async(ctx) => {
 
 const fn_getToken = async(ctx, next) => {
     /* 获取七牛云Token*/
-    const accessKey = '' //你的公钥
-    const secretKey = '' //你的密钥
+    const accessKey = '' //公钥
+    const secretKey = '' //密钥
     const mac = new qiniu.auth.digest.Mac(accessKey, secretKey)
     const putPolicy = new qiniu.rs.PutPolicy({
         scope: '' //你的对象存储空间名
@@ -325,6 +329,7 @@ const fn_updatePassword = async(ctx, next) => {
 
 module.exports = {
     'GET /': fn_render,
+    'GET /platform': fn_renderPlatform,
     'GET /api/getblogandtag': fn_getBlogAndTag,
     'GET /api/gettag': fn_getTag,
     'GET /api/getabout': fn_getAbout,

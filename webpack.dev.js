@@ -6,7 +6,7 @@ const path = require('path')
 
 module.exports = merge(common, {
     output: {
-        filename: 'bundle.js',
+        filename: '[name]-bundle.js',
         path: path.resolve('dist'),
         publicPath: '/'
     },
@@ -14,7 +14,13 @@ module.exports = merge(common, {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/client/template/page.html',
-            filename: './assets/page.ejs'
+            filename: './assets/page.ejs',
+            chunks: ['display'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/client/template/platformpage.html',
+            filename: './assets/platformpage.ejs',
+            chunks: ['platform'],
         })
     ]
 })
